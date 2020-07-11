@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Exibindo Categoria Informada</title>
+<title>Pagina inicial do app de despesas</title>
 </head>
 <body>
-<H2>${mensagem}</H2>
+<H2>Página inicial do controle de despesas</H2>
 </body>
 </html>

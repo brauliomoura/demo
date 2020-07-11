@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Confirmação de cadastro</title>
+<title>Confirma Registro de Aluno</title>
 </head>
 <body>
-
-<H2> Aluno ${aluno.nome} ${aluno.sobrenome} registrado com sucesso! </H2>
+<H2>Aluno ${aluno.nome} ${aluno.sobrenome} registrado com sucesso!</H2>
 </body>
 </html>

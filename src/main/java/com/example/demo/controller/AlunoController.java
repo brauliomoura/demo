@@ -8,25 +8,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.demo.model.Aluno;
 
 @Controller
-public class HomeController {
+public class AlunoController {
 	
-	@RequestMapping("/despesa/form")
-	public String despesa(Model model)
-	{
-		return "cadastro-despesa";
-	}
-
 	@RequestMapping("/aluno/form")
-	public String exibeFormulario(Model model) {
+	public String exibeForm(Model model) {
 		model.addAttribute("aluno", new Aluno());
 		return "aluno-form";
 	}
 	
-	@RequestMapping("/aluno/registraAluno")
-	public String registra(@ModelAttribute("aluno") Aluno aluno) {
-		
+	@RequestMapping("/aluno/registra")
+	public String registraAluno(@ModelAttribute("aluno") Aluno aluno) {
 		return "confirmacao-aluno";
 	}
+	
+	
+	
+	
+	
 	
 	
 }
