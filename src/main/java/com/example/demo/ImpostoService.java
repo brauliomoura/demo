@@ -1,11 +1,15 @@
 package com.example.demo;
 
-import java.util.List;
+import java.math.BigDecimal;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ImpostoService {
+	
+	@Autowired
+	private ImpostoAliquotaService aliquotaService;
 	
 	public String getFaixaDaAliquota(int rendimento) throws IllegalArgumentException {
 		
@@ -18,10 +22,29 @@ public class ImpostoService {
 		else return "MAIOR";
 	}
 	
-	public List<String> getFaixas(){
-		return List.of("ISENTO","INTERMEDIARIO","MAIOR");
+	public BigDecimal calculaImposto(int rendimento) {
+		BigDecimal aliquota = aliquotaService.getAliquota(getFaixaDaAliquota(rendimento));
+		
+		BigDecimal imposto = aliquota.multiply(new BigDecimal(rendimento));
+		
+		return imposto;
 	}
 	
 	
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
